@@ -58,9 +58,8 @@ function cadastrarVeiculo() {
         carros.push(carro);
     } while (continuar);
 
-    if (continuar === false) {
-        mostrarOpcoes();
-    }
+    mostrarOpcoes();
+
 
 }
 
@@ -109,7 +108,7 @@ function removerVeiculo(carros) {
     let idVeiculo = parseInt(prompt('Informe o indentificador do veiculo: '));
     let removerId = carros.findIndex(carro => carro.id === idVeiculo);
 
-    if(removerId !== -1) {
+    if (removerId !== -1) {
         carros.splice(removerId, 1);
     } else {
         alert('Veículo, não encontrado.');
